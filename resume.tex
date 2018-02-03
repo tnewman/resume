@@ -1,0 +1,138 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+% Configuration
+\documentclass[11pt, a4paper]{awesome-cv}
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+\fontdir[fonts/]
+\definecolor{awesome}{HTML}{DC0032}
+\setbool{acvSectionColorHighlight}{true}
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+% Contact Information
+\name{Thomas}{Newman}
+\position{Software Engineer}
+\address{REDACTED}
+
+\mobile{REDACTED}
+\email{REDACTED}
+\github{tnewman}
+\linkedin{thomasjnewman}
+
+\begin{document}
+
+\makecvheader[C]
+
+\cvsection{Experience}
+\begin{cventries}
+	\cventry
+	{Autonomous Vehicle IT Developer}
+	{Ford Motor Company}
+	{Dearborn, MI}
+	{September 2016 - Present}
+	{
+		\begin{cvitems}
+			\item{Developed Java-based, multi-threaded application to ingest data into Hadoop with a maximum throughput of 20 gigabits per second. The minimum viable product was delivered 
+				  3 months early.}
+			\item{Developed a web-based data ingestion monitoring application using Spring Boot and Angular JS. The application was deployed to Pivotal Cloud Foundry (PCF) and provided the 
+				  ability to support global ingestion sites from Dearborn.}
+			\item{Lead a cross-functional team to improve native Hadoop data ingestion performance from Palo Alto, CA to Dearborn, MI. This project saved the company \$300,000 per year by 
+				  eliminating the need to use a WAN accelerator.}
+			\item{Implemented a Continuous Integration (CI)/Continuous Deployment (CD) pipeline to allow the application to move from GitHub to the production PCF instance with no manual 
+				  intervention required outside of GitHub.}
+			\item{Mentored and trained two junior developers in various technologies, including Java, multi-threaded programming, and Spring Boot.}
+			\item{Lead the initial development of a mobility API and developer portal using Spring Boot and Angular and trained the dedicated development team.}
+		\end{cvitems}
+	}
+	
+	\cventry
+	{Java Center of Excellence Developer}
+	{Ford Motor Company}
+	{Dearborn, MI}
+	{August 2015 - September 2015}
+	{
+		\begin{cvitems}
+			\item{Supported an in-house Java EE-based credential management application used by 250+ projects and added new features, such as a REST API using JAX-RS and the ability to run 
+				  in PCF.}
+			\item{Migrated four in-house frameworks to Gradle and provided guidance to senior team members who were migrating other frameworks.}
+			\item{Supported global project teams on a daily basis through internal discussion boards and hands-on troubleshooting.}
+		\end{cvitems}
+	}
+	
+	\cventry
+	{Powertrain Site Process Management Analyst}
+	{Ford Motor Company}
+	{Dearborn, MI}
+	{June 2014 - July 2015}
+	{
+		\begin{cvitems}
+			\item{Worked with Plant IT Managers to collect data from the plants and create reports to help central teams plan in-plant hardware and software implementations.}
+			\item{Developed a C\# application to migrate quality data from a VAX minicomputer into Access, allowing the VAX to be decommissioned.}
+		\end{cvitems}
+	}
+	
+	\cventry
+	{Apprentice Engineer II}
+	{DENSO International America, Inc.}
+	{Southfield, MI}
+	{April 2013 - May 2014}
+	{
+		\begin{cvitems}
+			\item{Modified embedded Telematics Control Unit (TCU) to send commands to the vehicle's CAN bus to demonstrate remote control capability to customers.}
+			\item{Developed a vehicle status API in PHP that was used as part of DENSO's 2014 CES demo.}
+			\item{Introduced software craftsmanship practices to the team, including code refactoring and reuse.}
+		\end{cvitems}
+	}
+	
+	\cventry
+	{Engineering Intern}
+	{Schweitzer Engineering Laboratories}
+	{Plymouth, MI}
+	{May 2012 - March 2013}
+	{
+		\begin{cvitems}
+			\item{Programmed communications processors and HMIs (human-machine interfaces).}
+			\item{Prepared SCADA points lists (DNP, Modbus, and SEL protocol) and reports for customers.}
+			\item{Traveled to the field to install new equipment and troubleshoot previous installations.}
+		\end{cvitems}
+	}
+\end{cventries}
+
+\cvsection{Education}
+\begin{cventries}
+	\cventry
+	{Master of Science in Computer Science}
+	{Lawrence Technological University}
+	{Southfield, MI}
+	{Graduated May 2016}
+	{
+		\begin{cvitems}
+			\item{Developed Internet of Things (IOT) data acquisition platform using Python, Flask, and SQLAlchemy for the Raspberry Pi with a plugin system to allow end users to add custom 
+				  sensors.}
+			\item{Developed IP phone provisioning system in Python using mutual TLS for secure provisioning.}
+		\end{cvitems}
+	}
+	
+	\cventry
+	{Bachelor of Science in Computer Science}
+	{Lawrence Technological University}
+	{Southfield, MI}
+	{Graduated May 2014}
+	{}
+\end{cventries}
+
+% Cancel out the lack of content under the BSCS degree. The template should be updated to fix the need to do this.
+\vspace{-\baselineskip}
+
+\lettersection{Personal Projects}
+
+% Cancel out template spacing
+\vspace{2.0mm}
+
+\descriptionstyle{
+	\begin{cvitems}
+		\item{Developed a set of open source Ansible roles to deploy the 2600hz distributed VOIP platform, with an emphasis on support for Google Cloud Platform (GCP). Several enhancements were 
+			  made based on feedback from several community members.}
+	\end{cvitems}
+}
+\end{document}
