@@ -4,7 +4,7 @@
 % Configuration
 \documentclass[11pt, a4paper]{awesome-cv}
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
-\fontdir[./fonts/]
+\fontdir[fonts/]
 \definecolor{awesome}{HTML}{007185}
 \setbool{acvSectionColorHighlight}{true}
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
@@ -42,17 +42,29 @@
 \cvsection{Experience}
 \begin{cventries}
     \cventry
+    {Senior Software Engineer}
+    {Sift, LLC.}
+    {Detroit, MI}
+    {March 2019-Present}
+    {
+        \begin{cvitems}
+            \item{Architected and implemented APIs in NodeJS based on feedback from designers, front-end developers, and product managers. The APIs used various AWS services (DynamoDB, RDS, S3, SQS, etc.).}
+            \item{Architected and implemented next generation cloud infrastructure, including infrastructure as code (Terraform), containers (Docker and Kubernetes), and various AWS services (DynamoDB, RDS, S3, SQS, etc.). This effort significantly reduced site outages and simplified application deployments.}
+            \item{Migrated legacy applications and infrastructure, including modifying applications to run in Docker, setting up Docker builds, and setting up CI pipelines.}
+        \end{cvitems}
+    }
+
+    \cventry
     {Software Engineer}
     {DENSO International America, Inc.}
     {Southfield, MI}
-    {February 2018-Present}
+    {February 2018-March 2019}
     {
         \begin{cvitems}
-            \item{Architected microservices for a car sharing platform, including interfaces to vehicles and external partners.}
-            \item{Wrote microservices in Python (Flask), JavaScript (NodeJS) and Java (Spring Boot) for REST and Pub/Sub-based APIs. The microservices integrated with DynamoDB, Simple Notification Service (SNS), and Simple Queue Service (SQS).}
-            \item{Wrote a Python library for AWS Simple Notification Service (SNS) and AWS Simple Queue Service (SQS). This library allowed all Python microservices to benefit from multi-threaded queue subscriptions, greatly increasing performance.}
-            \item{Implemented a Continuous Integration (CI)/Continuous Deployment (CD) in Jenkins. Jenkins script libraries were created to allow developers to build and deploy applications packaged as Docker containers to Kubernetes with a single-line Jenkins file.}
-            \item{Provisioned infrastructure as code using Terraform in AWS. The Terraform plans were deployed by Jenkins with environments configured based on Git branches, ensuring consistent infrastructure across environments.}
+            \item{Architected and wrote microservices in Python (Flask), JavaScript (NodeJS) and Java (Spring Boot) for REST and Pub/Sub-based APIs. The microservices integrated with DynamoDB, SNS, and SQS for a car sharing platform.}
+            \item{Wrote a Python library for AWS SNS and SQS. This library allowed all Python microservices to benefit from multi-threaded queue subscriptions, greatly increasing performance.}
+            \item{Architected and implemented cloud infrastructure, including infrastructure as code (Terraform), containers (Docker and Kubernetes), and various AWS services (DynamoDB, SNS, and SQS).}
+            \item{Implemented Continuous Integration (CI)/Continuous Deployment (CD) pipelines in Jenkins.}
         \end{cvitems}
     }
 
@@ -108,14 +120,11 @@
     {Lawrence Technological University}
     {Southfield, MI}
     {Graduated May 2016}
-    {
-        \begin{cvitems}
-            \item{Developed Internet of Things (IOT) data acquisition platform using Python, Flask, and SQLAlchemy for the Raspberry Pi with a plugin system to allow end users to add custom 
-                  sensors.}
-            \item{Developed IP phone provisioning system in Python using mutual TLS for secure provisioning.}
-        \end{cvitems}
-    }
-    
+    {}
+
+% Cancel out the lack of spacing under the MCSC degree. The template should be updated to fix the need to do this.
+\vspace{-\baselineskip}
+
     \cventry
     {Bachelor of Science in Computer Science}
     {Lawrence Technological University}
@@ -127,15 +136,4 @@
 % Cancel out the lack of content under the BSCS degree. The template should be updated to fix the need to do this.
 \vspace{-\baselineskip}
 
-\lettersection{Personal Projects}
-
-% Cancel out template spacing
-\vspace{2.0mm}
-
-\descriptionstyle{
-    \begin{cvitems}
-        \item{Developed a set of open source Ansible roles to deploy the 2600hz distributed VOIP platform, with an emphasis on support for Google Cloud Platform (GCP). Several enhancements were 
-              made based on feedback from several community members.}
-    \end{cvitems}
-}
 \end{document}
